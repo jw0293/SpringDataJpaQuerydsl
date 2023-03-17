@@ -12,6 +12,7 @@ import java.util.List;
 @Entity
 @Getter @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+// 연관관계 가지고 있음
 public class Team {
 
     @Id @GeneratedValue
