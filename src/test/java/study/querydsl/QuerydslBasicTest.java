@@ -12,6 +12,7 @@ import study.querydsl.entity.Team;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.function.Supplier;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -25,7 +26,7 @@ public class QuerydslBasicTest {
 
     @BeforeEach
     public void before(){
-        queryFactory = new JPAQueryFactory();
+        queryFactory = new JPAQueryFactory(em);
         Team teamA = new Team("teamA");
         Team teamB = new Team("teamB");
         em.persist(teamA);
